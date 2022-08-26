@@ -40,7 +40,6 @@ def your_url():
         return redirect(url_for('index'))
 
 @app.route( '/<string:code>')
-@staticmethod
 def redirect_to_url(code):
     if os.path.exists('urls.json'):
             with open('urls.json') as urls_file:
